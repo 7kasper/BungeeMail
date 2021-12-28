@@ -13,9 +13,9 @@
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </repository>
         <repository>
-            <id>codecrafter47-repo</id>
-            <url>http://nexus.codecrafter47.dyndns.eu/content/repositories/public/</url>
-        </repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
         <repository>
             <id>dakani</id>
             <name>Dakani Nexus Repo</name>
@@ -54,9 +54,9 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>codecrafter47.util</groupId>
-            <artifactId>chat-utils</artifactId>
-            <version>1.1-SNAPSHOT</version>
+            <groupId>com.github.codecrafter47</groupId>
+            <artifactId>Utils</artifactId>
+            <version>master-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
