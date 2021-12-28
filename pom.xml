@@ -6,6 +6,19 @@
     <artifactId>BungeeMail</artifactId>
     <version>1.11-SNAPSHOT</version>
     <name>BungeeMail</name>
+	
+    <properties>
+        <java.version>11</java.version>
+        <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+        <google.jib.version>2.7.1</google.jib.version>
+    </properties>
+	
+    <scm>
+        <connection>scm:git:${project.scm.url}</connection>
+        <developerConnection>scm:git:${project.scm.url}</developerConnection>
+        <url>git@github.com:7kasper/BungeeMail.git</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <repositories>
         <repository>
@@ -118,24 +131,14 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+               <artifactId>maven-release-plugin</artifactId>
+               <version>${maven-release-plugin.version}</version>
+               <configuration>
+                    <scmCommentPrefix>[ci skip]</scmCommentPrefix>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
-    <scm>
-        <developerConnection>scm:git:https://github.com/CodeCrafter47/BungeeMail</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
-    <distributionManagement>
-        <repository>
-            <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://nexus.codecrafter47.dyndns.eu/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://nexus.codecrafter47.dyndns.eu/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
